@@ -1,0 +1,18 @@
+from pydrive.drive import GoogleDrive
+from pydrive.auth import GoogleAuth
+
+import os
+
+gauth = GoogleAuth()
+gauth.LocalWebserverAuth()
+drive = GoogleDrive(gauth)
+
+
+path = "caminho"
+
+for x in os.listdir(path:
+    f = drive.CreateFile({'title': x})
+f.SetContentFile(os.path.join(path, x))
+f.Upload()
+
+f= None
